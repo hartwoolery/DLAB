@@ -317,7 +317,7 @@ NS_INLINE BOOL copyPlaneDLtoCV(IDeckLinkVideoInputFrame* videoFrame, CVPixelBuff
         pbAttributes[pixelFormatKey] = @(cvPixelFormat);
         pbAttributes[widthKey] = @(videoFrame->GetWidth());
         pbAttributes[heightKey] = @(videoFrame->GetHeight());
-        pbAttributes[surfaceKey] = @([NSNull null]);
+        pbAttributes[surfaceKey] = [NSNull null];
         pbAttributes[bytesPerRowAlignmentKey] = @(16); // = 2^4 = 2 * sizeof(void*)
         
         CVReturn err = kCVReturnError;
